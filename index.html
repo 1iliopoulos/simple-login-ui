@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0b0f16;
+      color: #f5f5f7;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 360px;
+      padding: 24px 22px;
+      background: #121823;
+      border-radius: 10px;
+      border: 1px solid #242b3a;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 12px;
+      color: #9aa0b5;
+      margin-bottom: 18px;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #a3a9bd;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #2a3142;
+      background: #0c111a;
+      color: #f5f5f7;
+      font-size: 13px;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #666e82;
+    }
+
+    input:focus {
+      border-color: #3ea6ff;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 4px;
+      padding: 9px 12px;
+      border-radius: 6px;
+      border: none;
+      background: #0166be;
+      color: #ffffffc5;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0166be7e;
+      color: #ffffff98;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #ff7373;
+      min-height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Login</h1>
+    <p>Enter username and password to access the system.</p>
+
+    <form id="loginForm">
+      <div class="field">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="For example David"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="••••••••"
+          required
+        />
+      </div>
+
+      <button type="submit">Login</button>
+      <div id="message" class="message"></div>
+    </form>
+  </div>
+</body>
+</html>
